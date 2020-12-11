@@ -2,31 +2,65 @@
 
 namespace MVCFinalTamLe\controllers;
 
-use \MVCFinalTamLe\config\config;
-use \MVCFinalTamLe\controllers\ToolControllers;
+use MVCFinalTamLe\controllers\ProductControllers;
+use MVCFinalTamLe\controllers\RenderControllers;
+use MVCFinalTamLe\config\config;
+use MVCFinalTamLe\controllers\ToolControllers;
 
 class UrlControllers
 {
     protected $controllers = "index";
-    protected $action = "index";
+    protected $action = "";
     protected $params = [];
+    protected $render;
+    protected $search;
+    protected $product_controllers;
 
-    public function index()
+
+    public function __construct()
     {
-        static::ParseActionsParams(self::parseURL());
-        static::parseController();
+        $this->render = new RenderControllers();
+        $this->search = new SearchControllers();
+        $this->product_controllers = new ProductControllers();
     }
 
     public function parseController()
     {
         //ToolControllers::dd($this);
         switch ($this->controllers) {
-
-
+            case "add":
+                $this->product_controllers->addProduct();
+                break;
+            case "edit":
+                if (!empty($this->action)) {
+                    $this->product_controllers->editProduct($this->action);
+                } else {
+                    $this->render->errorPage();
+                }
+                break;
+            case "delete":
+                if (!empty($this->action)) {
+                    $this->product_controllers->deleteProduct($this->action);
+                } else {
+                    $this->render->errorPage();
+                }
+                break;
+            case "search":
+                if (!empty($_POST['search'])) {
+                    $this->search->search();
+                } else {
+                    $this->render->errorPage();
+                }
+                break;
             default:
-                //(new RenderControllers)->errorPage();
-                (new RenderControllers)->homepage();
+                $this->product_controllers->getProductList();
         }
+    }
+
+    public function index()
+    {
+        static::ParseActionsParams(self::parseURL());
+        static::parseController();
     }
 
     public static function parseURL()

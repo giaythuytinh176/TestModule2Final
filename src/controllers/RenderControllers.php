@@ -1,6 +1,7 @@
 <?php
 
 namespace MVCFinalTamLe\controllers;
+
 use \MVCFinalTamLe\controllers\ToolControllers;
 
 class RenderControllers
@@ -24,7 +25,7 @@ class RenderControllers
     public static function redirectAfterSecondPage($page = "", $second = 1)
     {
         if (headers_sent()) {
-            die("Redirect to new page ... <a href='" . \MVCFinalTamLe\controllers\UrlControllers::url($page) . "'></a> <meta http-equiv=\"Refresh\" content=\"1; url=" . \MVCFinalTamLe\controllers\UrlControllers::url($page) . "\">");
+            die("Redirect to new page ... <a href='" . \MVCFinalTamLe\controllers\UrlControllers::url($page) . "'></a> <meta http-equiv=\"Refresh\" content=\"" . $second . "; url=" . \MVCFinalTamLe\controllers\UrlControllers::url($page) . "\">");
         } else {
             exit(header("Location: " . \MVCFinalTamLe\controllers\UrlControllers::url($page)));
         }

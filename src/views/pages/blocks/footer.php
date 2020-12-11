@@ -29,37 +29,37 @@
 
 </section>
 <footer id="footer" class="dark">
-<!-- Copyrights
-============================================= -->
-<div id="copyrights">
-    <div class="container">
+    <!-- Copyrights
+    ============================================= -->
+    <div id="copyrights">
+        <div class="container">
 
-        <div class="row col-mb-30">
+            <div class="row col-mb-30">
 
-            <div class="col-md-6 text-center text-md-left">
-                Copyrights &copy; 2019 - <?php echo date("Y"); ?> All Rights Reserved by CodeGym Inc.<br>
-                <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
-            </div>
-
-            <div class="col-md-6 text-center text-md-right">
-                <div class="d-flex justify-content-center justify-content-md-end">
-                    <a href="https://www.facebook.com/giaythuytinh176" target="_blank"
-                       class="social-icon si-small si-borderless si-facebook">
-                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                    </a>
+                <div class="col-md-6 text-center text-md-left">
+                    Copyrights &copy; 2019 - <?php echo date("Y"); ?> All Rights Reserved by CodeGym Inc.<br>
+                    <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
                 </div>
 
-                <div class="clear"></div>
+                <div class="col-md-6 text-center text-md-right">
+                    <div class="d-flex justify-content-center justify-content-md-end">
+                        <a href="https://www.facebook.com/giaythuytinh176" target="_blank"
+                           class="social-icon si-small si-borderless si-facebook">
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </a>
+                    </div>
 
-                <i class="fa fa-address-book" aria-hidden="true"></i>
-                giaythuytinh176@gmail.com <i class="fa fa-phone" aria-hidden="true"></i>
-                +84-979-029-556
+                    <div class="clear"></div>
+
+                    <i class="fa fa-address-book" aria-hidden="true"></i>
+                    giaythuytinh176@gmail.com <i class="fa fa-phone" aria-hidden="true"></i>
+                    +84-979-029-556
+                </div>
+
             </div>
 
         </div>
-
-    </div>
-</div><!-- #copyrights end -->
+    </div><!-- #copyrights end -->
 </footer>
 </div>
 
