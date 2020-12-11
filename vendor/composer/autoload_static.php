@@ -6,22 +6,28 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit18c27d9bb639b2487584ea2cfe3f7f4e
 {
-    public static $prefixLengthsPsr4 = array (
-        'M' => 
-        array (
-            'MVCFinalTamLe\\' => 14,
-        ),
+    public static $prefixLengthsPsr4 = array(
+        'M' =>
+            array(
+                'MVCFinalTamLe\\' => 14,
+            ),
     );
 
-    public static $prefixDirsPsr4 = array (
-        'MVCFinalTamLe\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
+    public static $prefixDirsPsr4 = array(
+        'MVCFinalTamLe\\' =>
+            array(
+                0 => __DIR__ . '/../..' . '/src',
+            ),
     );
 
-    public static $classMap = array (
+    public static $classMap = array(
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'MVCFinalTamLe\\config\\config' => __DIR__ . '/../..' . '/src/config/config.php',
+        'MVCFinalTamLe\\controllers\\RenderControllers' => __DIR__ . '/../..' . '/src/controllers/RenderControllers.php',
+        'MVCFinalTamLe\\controllers\\ToolControllers' => __DIR__ . '/../..' . '/src/controllers/ToolControllers.php',
+        'MVCFinalTamLe\\controllers\\UrlControllers' => __DIR__ . '/../..' . '/src/controllers/UrlControllers.php',
+        'MVCFinalTamLe\\libs\\Database' => __DIR__ . '/../..' . '/src/libs/Database.php',
+        'MVCFinalTamLe\\models\\CRUDModels' => __DIR__ . '/../..' . '/src/models/CRUDModels.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

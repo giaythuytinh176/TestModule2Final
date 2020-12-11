@@ -7,4 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'MVCFinalTamLe\\config\\config' => $baseDir . '/src/config/config.php',
+    'MVCFinalTamLe\\controllers\\RenderControllers' => $baseDir . '/src/controllers/RenderControllers.php',
+    'MVCFinalTamLe\\controllers\\ToolControllers' => $baseDir . '/src/controllers/ToolControllers.php',
+    'MVCFinalTamLe\\controllers\\UrlControllers' => $baseDir . '/src/controllers/UrlControllers.php',
+    'MVCFinalTamLe\\libs\\Database' => $baseDir . '/src/libs/Database.php',
+    'MVCFinalTamLe\\models\\CRUDModels' => $baseDir . '/src/models/CRUDModels.php',
 );
